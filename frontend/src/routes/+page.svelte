@@ -3,6 +3,7 @@
     import Typing from "$lib/components/effects/Typing.svelte";
     import {Button} from "carbon-components-svelte";
     import Contacts from "$lib/components/about/Contacts.svelte";
+    import Team from "$lib/components/about/Team.svelte";
 
     export let data;
 
@@ -20,6 +21,9 @@
         </div>
         <div class="about__image"></div>
     </div>
+    <div class="about-page__team">
+        <Team />
+    </div>
     <div class="about-page__contacts">
         <Contacts contacts={data.contacts} officeCoords={data.officeCoords} />
     </div>
@@ -30,6 +34,10 @@
 <style lang="scss">
     .about-page {
       &__about{
+      }
+
+      &__team {
+        margin-top: 50px;
       }
 
       &__contacts {
