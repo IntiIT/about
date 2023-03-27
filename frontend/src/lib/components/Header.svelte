@@ -117,8 +117,8 @@
     &__phone {
       opacity: 1;
       @include text(p2);
+      color: #1b63fe;
       font-weight: normal;
-      opacity: 1;
     }
 
     &__soc-list {
