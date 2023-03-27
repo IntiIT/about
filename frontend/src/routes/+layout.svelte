@@ -7,22 +7,11 @@
     import Header from '$lib/components/Header.svelte';
     import Footer from "$lib/components/Footer.svelte";
 
-    const contacts = {
-        phone: "+7 (904) 221 38 18",
-        email: "efim-02@mail.ru",
-        telegram: "",
-    }
-
-    const socLinks = [
-        {
-            name: "vk",
-            link: "vk.com"
-        }
-    ]
+    export let data;
 </script>
 
-<Header {contacts} />
-<SideNav {contacts} {socLinks} />
+<Header contacts={data.contacts} />
+<SideNav contacts={data.contacts} socLinks={data.socLinks} />
 
 <svelte:head>
     <title>ИНТИИТ</title>
@@ -32,7 +21,7 @@
     <Breadcrumb/>
     <slot/>
 </Content>
-<Footer {contacts} {socLinks} />
+<Footer contacts={data.contacts} socLinks={data.socLinks} />
 
 <style lang="scss" global>
   @import 'src/styles/main.scss';
