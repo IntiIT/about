@@ -18,15 +18,14 @@
         <div class="side-menu__contacts">
             <div class="side-menu__phone-row phone-row">
                 <a href="tel:{contacts.phone}" class="phone-row__phone">{contacts.phone}</a>
-                {#if contacts.telegram}
-                    <a href="{contacts.telegram}" class="phone-row__soc-icon"><img
-                            src="/images/icons/soc/telegram.png" alt="Телеграм"></a>
-                {/if}
             </div>
             <div class="side-menu__email">
                 <a href="mailto:{contacts.email}">{contacts.email}</a>
             </div>
             <div class="side-menu__soc-links">
+                {#if contacts.telegram}
+                    <a href="{contacts.telegram}" class="side-menu__soc-link soc-link">телеграм</a>
+                {/if}
                 {#each socLinks as socLink }
                     <a href="{socLink.link}" class="side-menu__soc-link soc-link">{socLink.name}</a>
                 {/each}

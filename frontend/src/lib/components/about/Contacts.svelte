@@ -27,6 +27,12 @@
                 <div class="contacts__value">{contacts.email}</div>
             </div>
         {/if}
+        {#if contacts.telegram}
+            <div class="contacts__row">
+                <div class="contacts__label">Телеграм:</div>
+                <div class="contacts__value">{contacts.telegram}</div>
+            </div>
+        {/if}
         <div class="contacts__row">
             <div class="contacts__label">Адрес офиса:</div>
             <div class="contacts__value">Чебоксары, Чувашская Респ., ул. Афанасьева, 8, кабинет 411</div>

@@ -15,11 +15,11 @@
                 <div class="footer__contacts footer-contacts">
                     <div class="footer-contacts__row phone-row phone-row_mini">
                         <a href="tel:{contacts.phone}" class="phone-row__phone">{contacts.phone}</a>
-                        {#if contacts.telegram}
-                            <a href="{contacts.telegram}" class="phone-row__soc-icon">телеграм</a>
-                        {/if}
                     </div>
                     <div class="footer-contacts__row"><a href="mailto:{contacts.email}">{contacts.email}</a></div>
+                    {#if contacts.telegram}
+                        <div class="footer-contacts__row"><a href="{contacts.telegram}">телеграм</a></div>
+                    {/if}
                     <div class="footer-contacts__row">
                         {#each socLinks as socLink }
                             <a href="{socLink.link}" class="footer-contacts__soc soc-link">{socLink.name}</a>
