@@ -1,5 +1,7 @@
 <script>
-    import {Button} from "carbon-components-svelte";
+    import {breadcrumb} from "$lib/shared/stores/breadcrumb.js";
+
+    breadcrumb.set([])
 </script>
 
 <h1>ИНТИИТ</h1>

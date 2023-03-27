@@ -17,7 +17,11 @@
 
 <div class="error">
     <h1 class="error__title">Оупс...</h1>
-    <p class="error__description">Ошибка {$page.status} ({$page.error.message})</p>
+    {#if $page.status === 404}
+        <p class="error__description">Страница не найдена</p>
+    {:else}
+        <p class="error__description">Ошибка {$page.status} ({$page.error.message})</p>
+    {/if}
 </div>
 
 <style lang="scss">
