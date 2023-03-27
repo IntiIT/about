@@ -5,6 +5,7 @@
     import Breadcrumb from '$lib/components/Breadcrumb.svelte';
     import SideNav from '$lib/components/SideNav.svelte';
     import Header from '$lib/components/Header.svelte';
+    import Footer from "$lib/components/Footer.svelte";
 
     const contacts = {
         phone: "+7 (904) 221 38 18",
@@ -31,6 +32,7 @@
     <Breadcrumb/>
     <slot/>
 </Content>
+<Footer {contacts} {socLinks} />
 
 <style lang="scss" global>
   @import 'src/styles/main.scss';
