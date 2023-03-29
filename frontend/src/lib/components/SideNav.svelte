@@ -12,9 +12,9 @@
             <img src="images/icons/close.png" alt="Закрыть боковое меню" on:click={() => {isSideMenuOpened.set(false)}}>
         </div>
         <div class="side-menu__links">
-            <a href="/#team" class="side-menu__link" on:click={handleAnchorClick}>наша команда</a>
-            <a href="/#portfolio" class="side-menu__link" on:click={handleAnchorClick}>портфолио</a>
-            <a href="/#contacts" class="side-menu__link" on:click={handleAnchorClick}>контакты</a>
+            <a href="/#team" class="side-menu__link" on:click={(e) => {isSideMenuOpened.set(false); handleAnchorClick(e);}}>наша команда</a>
+            <a href="/#portfolio" class="side-menu__link" on:click={(e) => {isSideMenuOpened.set(false); handleAnchorClick(e);}}>портфолио</a>
+            <a href="/#contacts" class="side-menu__link" on:click={(e) => {isSideMenuOpened.set(false); handleAnchorClick(e);}}>контакты</a>
         </div>
         <div class="side-menu__contacts">
             <div class="side-menu__phone-row phone-row">
