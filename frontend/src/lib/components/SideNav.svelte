@@ -159,4 +159,56 @@
       }
     }
   }
+
+  @media screen and (max-width: 480px) {
+    .side-menu {
+      padding-top: 35px;
+      padding-left: 40px;
+      padding-right: 15px;
+      padding-bottom: 55px;
+
+      &__content {
+        padding-top: 65px;
+      }
+
+      &__link {
+        margin-top: 20px;
+        @include text(p4);
+
+        &:nth-child(1) {
+          margin-top: 0px;
+        }
+      }
+
+      &__phone-row {
+        margin-top: 60px;
+
+        a {
+          font-size: 18px;
+        }
+      }
+
+      &__soc-icon {
+        margin: 10px;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &__email {
+        margin-top: 15px;
+
+        a {
+          font-size: 18px;
+        }
+      }
+
+      &__soc-links {
+        font-size: 16px;
+        margin-top: 15px;
+      }
+    }
+  }
 </style>

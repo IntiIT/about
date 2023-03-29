@@ -124,29 +124,21 @@
     }
   }
 
-  .dropdown {
-    position: relative;
-
-    &__content {
-      position: absolute;
-      top: -9999em;
-      right: 0px;
-      opacity: 0;
-      z-index: 11;
-      transition: 0.3s opacity;
-    }
-
-    &:hover &__content,
-    &__content:hover {
-      top: 20px;
-      opacity: 1;
-      height: auto;
-    }
-  }
-
   .side-menu-btn {
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .header {
+      &__nav {
+        display: none;
+      }
+
+      &__contacts {
+        display: none;
+      }
     }
   }
 </style>

@@ -132,6 +132,8 @@
   }
 
   .footer-contacts {
+    margin-right: 10px;
+
     &__row {
       margin-top: 14px;
       display: flex;
@@ -164,6 +166,28 @@
 
       &:nth-child(1) {
         margin-left: 0px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .footer {
+      margin-top: 20px;
+
+      &__rights {
+        margin-top: 20px;
+      }
+
+      img {
+        max-width: 200px;
+      }
+    }
+
+    .footer-contacts {
+      &__row {
+        a {
+          font-size: 16px;
+        }
       }
     }
   }
