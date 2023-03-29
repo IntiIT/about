@@ -22,13 +22,13 @@
         </div>
         <div class="about__image"></div>
     </div>
-    <div class="about-page__team">
+    <div class="about-page__team" id="team">
         <Team />
     </div>
-    <div class="about-page__portfolio">
+    <div class="about-page__portfolio" id="portfolio">
         <Portfolio />
     </div>
-    <div class="about-page__contacts">
+    <div class="about-page__contacts" id="contacts">
         <Contacts contacts={data.contacts} officeCoords={data.officeCoords} />
     </div>
 </div>

@@ -1,4 +1,6 @@
 <script>
+    import {handleAnchorClick} from "$lib/utils/anchor.js";
+
     export let contacts;
     export let socLinks = [];
 </script>
@@ -31,9 +33,9 @@
             </div>
             <div class="footer__column footer__column_column4">
                 <div class="footer__links">
-                    <div class="footer__link"><a href="/team">наша команда</a></div>
-                    <div class="footer__link"><a href="/portfolio">портфолио</a></div>
-                    <div class="footer__link"><a href="/contacts">контакты</a></div>
+                    <div class="footer__link"><a href="/#team" on:click={handleAnchorClick}>наша команда</a></div>
+                    <div class="footer__link"><a href="/#portfolio" on:click={handleAnchorClick}>портфолио</a></div>
+                    <div class="footer__link"><a href="/#contacts" on:click={handleAnchorClick}>контакты</a></div>
                 </div>
                 <div class="footer__dev">ООО "ИНТИИТ"</div>
             </div>

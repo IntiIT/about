@@ -1,5 +1,6 @@
 <script>
-    import {isSideMenuOpened} from "../shared/stores/side-menu.js";
+    import {isSideMenuOpened} from "$lib/shared/stores/side-menu.js";
+    import {handleAnchorClick} from "$lib/utils/anchor.js";
 
     export let contacts;
 </script>
@@ -14,9 +15,9 @@
         /></a>
         <nav class="header__nav main-nav">
             <div class="main-nav__links">
-                <a href="/team" class="main-nav__link">наша команда</a>
-                <a href="/portfolio" class="main-nav__link">портфолио</a>
-                <a href="/contacts" class="main-nav__link">контакты</a>
+                <a href="/#team" class="main-nav__link" on:click={handleAnchorClick}>наша команда</a>
+                <a href="/#portfolio" class="main-nav__link" on:click={handleAnchorClick}>портфолио</a>
+                <a href="/#contacts" class="main-nav__link" on:click={handleAnchorClick}>контакты</a>
             </div>
         </nav>
         <div class="header__contacts header-contacts">
@@ -31,23 +32,6 @@
                         alt="Меню"
                         on:click={() => {isSideMenuOpened.set(true)}}
                 >
-            </div>
-            <div class="dropdown header-profile-dropdown">
-                <div class="dropdown__content header-profile-dropdown__content">
-                    <div class="header-profile-dropdown__filler"></div>
-                    <div class="header-profile-dropdown__inner">
-                        <a href="/courses" class="header-profile-dropdown__link"
-                        >Мои курсы</a
-                        >
-                        <a href="/settings" class="header-profile-dropdown__link"
-                        >Настройки профиля</a
-                        >
-                        <a href="#" class="header-profile-dropdown__link" data-request="onLogout"
-                           data-request-data="redirect: '/'"
-                        >Выход</a
-                        >
-                    </div>
-                </div>
             </div>
         </div>
     </div>
