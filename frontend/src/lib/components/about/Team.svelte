@@ -106,6 +106,7 @@
       border-radius: 20px;
       background-color: #f5f5f5;
       background-size: 100px;
+      margin-left: 20px;
     }
 
     &__title {
@@ -113,6 +114,50 @@
 
     &__description {
       margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-team {
+
+      &__slide {
+        flex-wrap: wrap;
+      }
+
+      &__title {
+        font-size: 24px;
+      }
+
+      &__description {
+        margin-top: 10px;
+      }
+
+      &__about {
+        margin-top: 20px;
+        order: 1;
+      }
+
+      &__image {
+        margin-left: 0px;
+        max-height: 300px;
+      }
+    }
+  }
+
+  :global(.about-team__switcher .bx--content-switcher) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  :global(.about-team__switcher .bx--content-switcher button) {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    margin-top: 5px;
+
+    &:nth-child(1) {
+      margin-top: 0;
     }
   }
 </style>
