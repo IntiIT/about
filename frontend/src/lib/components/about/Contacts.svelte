@@ -110,4 +110,36 @@
         }
       }
     }
+
+    @media screen and (max-width: 768px) {
+      .about-contacts {
+        flex-wrap: wrap;
+
+        &__map {
+          width: 100%;
+          margin-top: 20px;
+          margin-left: 0px;
+
+        }
+      }
+
+      .contacts {
+        &__row {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &__value {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .about-contacts {
+        &__map {
+          height: 300px;
+        }
+      }
+    }
 </style>

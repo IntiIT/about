@@ -47,7 +47,7 @@
   @import 'src/styles/main.scss';
 
   .footer {
-    margin-top: 100px;
+    margin-top: 50px;
 
     a {
       text-decoration: none;
