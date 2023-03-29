@@ -4,6 +4,7 @@
     import {Button} from "carbon-components-svelte";
     import Contacts from "$lib/components/about/Contacts.svelte";
     import Team from "$lib/components/about/Team.svelte";
+    import Portfolio from "$lib/components/about/Portfolio.svelte";
 
     export let data;
 
@@ -24,6 +25,9 @@
     <div class="about-page__team">
         <Team />
     </div>
+    <div class="about-page__portfolio">
+        <Portfolio />
+    </div>
     <div class="about-page__contacts">
         <Contacts contacts={data.contacts} officeCoords={data.officeCoords} />
     </div>
@@ -37,6 +41,10 @@
       }
 
       &__team {
+        margin-top: 50px;
+      }
+
+      &__portfolio {
         margin-top: 50px;
       }
 

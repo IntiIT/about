@@ -13,7 +13,7 @@
 
 <div class="about-contacts">
     <div class="about-contacts__contacts contacts">
-        <h1 class="contacts__title">Контакты</h1>
+        <h2 class="contacts__title">Контакты</h2>
 
         {#if contacts.phone}
             <div class="contacts__row">
