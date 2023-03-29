@@ -25,10 +25,10 @@
             </div>
             <div class="side-menu__soc-links">
                 {#if contacts.telegram}
-                    <a href="{contacts.telegram}" class="side-menu__soc-link soc-link">телеграм</a>
+                    <a href="{contacts.telegram}" target="_blank" rel="noopener noreferrer" class="side-menu__soc-link soc-link">телеграм</a>
                 {/if}
                 {#each socLinks as socLink }
-                    <a href="{socLink.link}" class="side-menu__soc-link soc-link">{socLink.name}</a>
+                    <a href="{socLink.link}" target="_blank" rel="noopener noreferrer" class="side-menu__soc-link soc-link">{socLink.name}</a>
                 {/each}
             </div>
         </div>

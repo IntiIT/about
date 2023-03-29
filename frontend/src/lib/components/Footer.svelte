@@ -20,11 +20,11 @@
                     </div>
                     <div class="footer-contacts__row"><a href="mailto:{contacts.email}">{contacts.email}</a></div>
                     {#if contacts.telegram}
-                        <div class="footer-contacts__row"><a href="{contacts.telegram}">телеграм</a></div>
+                        <div class="footer-contacts__row"><a href="{contacts.telegram}" target="_blank" rel="noopener noreferrer">телеграм</a></div>
                     {/if}
                     <div class="footer-contacts__row">
                         {#each socLinks as socLink }
-                            <a href="{socLink.link}" class="footer-contacts__soc soc-link">{socLink.name}</a>
+                            <a href="{socLink.link}" target="_blank" rel="noopener noreferrer" class="footer-contacts__soc soc-link">{socLink.name}</a>
                         {/each}
                     </div>
                 </div>
