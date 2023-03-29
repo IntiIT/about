@@ -142,22 +142,22 @@
         max-height: 300px;
       }
     }
-  }
 
-  :global(.about-team__switcher .bx--content-switcher) {
-    flex-direction: column;
-    height: auto;
-  }
+    :global(.about-team__switcher .bx--content-switcher) {
+      flex-direction: column;
+      height: auto;
+    }
 
-  :global(.about-team__switcher .bx--content-switcher button) {
-    border-radius: 10px;
-    border: none;
-    outline: none;
+    :global(.about-team__switcher .bx--content-switcher button) {
+      border-radius: 10px;
+      border: none;
+      outline: none;
 
-    margin-top: 5px;
+      margin-top: 5px;
 
-    &:nth-child(1) {
-      margin-top: 0;
+      &:nth-child(1) {
+        margin-top: 0;
+      }
     }
   }
 </style>
