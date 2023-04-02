@@ -1,8 +1,93 @@
 <script>
-    import {ContentSwitcher, Switch} from "carbon-components-svelte";
+    import {ContentSwitcher, RecursiveList, Switch} from "carbon-components-svelte";
     import {Group, ListChecked, Network_4} from "carbon-icons-svelte";
 
     let contentIndex = 0;
+    const competencies = [
+        {
+            text: "Аналитика",
+            children: [
+                {
+                    text: "Составление технического задания и других документов",
+                },
+                {
+                    text: "Оптимизация карты пути пользователя",
+                },
+                {
+                    text: "Проверка бизнес-гипотез",
+                },
+            ]
+        },
+        {
+            text: "Дизайн интерфейсов",
+            children: [
+                {
+                    text: "Проектирование интуитивно понятных макетов",
+                },
+                {
+                    text: "Адаптивность под разные разрешения экранов",
+                },
+            ]
+        },
+        {
+            text: "Разработка",
+            children: [
+                {
+                    text: "Автоматизация бизнес-процессов",
+                },
+                {
+                    text: "Интеграция систем и поддержка",
+                },
+                {
+                    text: "Машинное обучение",
+                },
+            ],
+        },
+    ];
+
+    const consumerAdvantages = [
+        {
+            text: "Предварительные этапы",
+            children: [
+                {
+                    text: "Полное понимание бизнес процессов и запросов целевой аудитории",
+                },
+                {
+                    text: "Различные решения поставленных задач для оптимизации времени разработки и цены",
+                },
+            ]
+        },
+        {
+            text: "Разработка",
+            children: [
+                {
+                    text: "Документация и покрытие автоматическими тестами",
+                },
+                {
+                    text: "Прозрачная работа с мониторингом прогресса",
+                },
+                {
+                    text: "Расширяемость функционала и масштабируемость",
+                },
+            ]
+        },
+        {
+            text: "Период тестирования",
+            children: [
+                {
+                    text: "Бесплатная доработка небольших дополнительных правок",
+                },
+            ],
+        },
+        {
+            text: "Поддержка",
+            children: [
+                {
+                    text: "Всегда на связи",
+                },
+            ],
+        },
+    ];
 </script>
 
 <div class="about-team">
@@ -34,23 +119,42 @@
         {#if contentIndex === 0}
             <div class="about-team__slide about-team__people">
                 <div class="about-team__about">
-                    <h2 class="about-team__title">Команда</h2>
-                    <div class="about-team__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem culpa deleniti, doloremque earum eligendi id modi numquam omnis quas quasi repellat, repellendus repudiandae sunt tempora, tempore voluptas voluptates. Officiis!
+                    <h2 class="about-team__title">О компании</h2>
+                    <div class="about-team__description about-team-description">
+                        <p class="about-team-description__block">ИНТИИТ — команда молодых специалистов. Мы постоянно развиваем наши компетенции и применяем проверенные <span class="about-team-description__bold">инновационные</span> решения для реализации функционала проекта.</p>
+                        <p class="about-team-description__block">Проекты в нашем портфолио разработаны с использованием современных технологий, в том числе с использованием машинного обучения. Это позволяет нам создавать масштабируемое программного обеспечение сохраняя высокую скорость разработки.</p>
+                        <p class="about-team-description__competencies">
+                            <RecursiveList children={competencies} />
+                        </p>
                     </div>
                 </div>
-                <div class="about-team__image"></div>
+                <div class="about-team__image">
+                    <img src="/images/team/team.svg" alt="Компетенции">
+                </div>
             </div>
         <!--  Как мы работаем  -->
         {:else if contentIndex === 1}
             <div class="about-team__slide about-team__how">
                 <div class="about-team__about">
-                    <h2 class="about-team__title">Как мы работаем</h2>
+                    <h2 class="about-team__title">Процесс разработки</h2>
                     <div class="about-team__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, sunt unde? Accusantium at, beatae consequuntur deleniti ea eligendi enim et hic itaque laboriosam molestias necessitatibus nobis qui ratione, sit vel.
+                        <div class="about-team__description about-team-description">
+                            <p class="about-team-description__block">
+                                Перед началом работы мы <span class="about-team-description__bold">бесплатно</span> проводим анализ бизнес процессов для автоматизации и предлагаем несколько вариантов для решения задач.
+                                После утверждения функционала мы высылаем коммерческое предложение, проект договора и согласуем детали.</p>
+                            <p class="about-team-description__block">
+                                Наша команда работает по двух недельным спринтам, по окончанию спринтов мы документируем разработку и пишем автоматические тесты для повышения надежности приложений.
+                                Преимущества для партнеров:
+                            </p>
+                            <p class="about-team-description__competencies">
+                                <RecursiveList children={consumerAdvantages} />
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="about-team__image"></div>
+                <div class="about-team__image">
+                    <img src="/images/team/project-cycle.svg" alt="Алгоритм работы">
+                </div>
             </div>
         <!--  Технологии  -->
         {:else if contentIndex === 2}
@@ -58,10 +162,16 @@
                 <div class="about-team__about">
                     <h2 class="about-team__title">Технологии</h2>
                     <div class="about-team__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consectetur culpa eaque incidunt iste iusto molestiae nemo nesciunt nihil perferendis perspiciatis quam quasi quos, ratione rem rerum ullam unde vitae.
+                        В процессе разработки мы используем микросервисную разработку, это позволяет сохранить цену разработки нового функционала при росте кодовой базы.
+                        Использование технологий искусственного интеллекта позволяет решать самые смелые и <span class="about-team-description__bold">нестандартные</span> задачи.
+                    </div>
+                    <div class="about-team__description">
+                        Наши разработки документируются для упрощения процессов подключения к проекту новых сотрудников и покрываются программными тестами для автоматического поиска ошибок до выгрузки обновления. Наши системы открыты к интеграции с внешними системами.
                     </div>
                 </div>
-                <div class="about-team__image"></div>
+                <div class="about-team__image">
+                    <img src="/images/team/technologies.svg" alt="Алгоритм работы">
+                </div>
             </div>
         {:else }
             Контент не найден
@@ -104,9 +214,16 @@
       max-width: 500px;
       height: 500px;
       border-radius: 20px;
-      background-color: #f5f5f5;
       background-size: 100px;
       margin-left: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
     }
 
     &__title {
@@ -114,6 +231,25 @@
 
     &__description {
       margin-top: 20px;
+    }
+  }
+
+  .about-team-description {
+    &__bold {
+      font-weight: bold;
+    }
+
+    &__block {
+      margin-top: 10px;
+
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+
+    &__competencies {
+      margin-top: 10px;
+      margin-left: 30px;
     }
   }
 
@@ -133,13 +269,14 @@
       }
 
       &__about {
+        max-width: 100%;
         margin-top: 20px;
         order: 1;
       }
 
       &__image {
         margin-left: 0px;
-        max-height: 300px;
+        max-width: 100%;
       }
     }
 
