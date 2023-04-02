@@ -1,0 +1,54 @@
+version: '3.9'
+services:
+  # frontend
+  frontend:
+    container_name: frontend
+    env_file: .env
+    environment:
+      - PORT=8081
+      - PROTOCOL_HEADER=X-Forwarded-Proto
+      - HOST_HEADER=X-Forwarded-For
+      - ADDRESS_HEADER=X-Real-IP
+      - ORIGIN=${HTTP_PROTOCOL:?}://${PUBLIC_ADDR:?}
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        HTTP_PROTOCOL: ${HTTP_PROTOCOL:?}
+        PUBLIC_ADDR: ${PUBLIC_ADDR:?}
+        CONTACTS_PHONE: ${CONTACTS_PHONE:?}
+        CONTACTS_EMAIL: ${CONTACTS_EMAIL:?}
+        CONTACTS_TELEGRAM: ${CONTACTS_TELEGRAM:?}
+        CONTACTS_GITHUB: ${CONTACTS_GITHUB:?}
+        OFFICE_COORDS_LAT: ${OFFICE_COORDS_LAT:?}
+        OFFICE_COORDS_LON: ${OFFICE_COORDS_LON:?}
+    restart: on-failure
+    networks:
+      - main
+    depends_on:
+      - api
+
+  nginx:
+    image: staticfloat/nginx-certbot
+    restart: always
+    ports:
+        - "80:80/tcp"
+        - "443:443/tcp"
+    environment:
+        CERTBOT_EMAIL: ${CERTBOT_EMAIL:?}
+        ENVSUBST_VARS: DOMAIN
+        DOMAIN: ${PUBLIC_ADDR:?}
+    volumes:
+      - ./nginx:/etc/nginx/user.conf.d:ro
+      - letsencrypt:/etc/letsencrypt
+    networks:
+      - main
+    depends_on:
+      - frontend
+
+networks:
+  main:
+    driver: bridge
+
+volumes:
+  letsencrypt:
