@@ -1,0 +1,5 @@
+Sitemap: https://intiit.ru/sitemap.xml
+Host: https://intiit.ru
+
+User-agent: *
+Disallow:
