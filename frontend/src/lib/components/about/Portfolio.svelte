@@ -7,9 +7,11 @@
     <h2 class="portfolio__title">Наши проекты</h2>
     <div class="portfolio__slider">
         <Slider>
-            <PortfolioItem name="CityGIS2" />
-            <PortfolioItem name="CityGIS3" />
-            <PortfolioItem name="CityGIS1" />
+            <PortfolioItem name="portfolio1" />
+            <PortfolioItem name="portfolio2" />
+            <PortfolioItem name="portfolio3" />
+            <PortfolioItem name="portfolio4" />
+            <PortfolioItem name="portfolio5" />
         </Slider>
     </div>
 </div>
