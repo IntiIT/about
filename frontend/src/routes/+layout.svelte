@@ -15,6 +15,13 @@
 
 <svelte:head>
     <title>ИНТИИТ</title>
+    <meta name="description" content="ИНТИИТ — команда молодых специалистов, разрабатывающая масштабируемые системы с использованием искусственного интеллекта">
+    <meta name="keywords" content="информационные системы, разработка проектов, сайты, приложения, аналитика">
+
+    <meta property="og:title" content="ООО ИНТИИТ"/>
+    <meta property="og:description" content="ИНТИИТ — команда молодых специалистов, разрабатывающая масштабируемые системы с использованием искусственного интеллекта"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="logo-full-short.png"/>
 </svelte:head>
 
 <Content>
