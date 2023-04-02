@@ -21,7 +21,7 @@
     <meta property="og:title" content="ООО ИНТИИТ"/>
     <meta property="og:description" content="ИНТИИТ — команда молодых специалистов, разрабатывающая масштабируемые системы с использованием искусственного интеллекта"/>
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="logo-full-short.png"/>
+    <meta property="og:image" content="favicon.png"/>
 </svelte:head>
 
 <Content>
