@@ -1,14 +1,23 @@
+import {
+    PUBLIC_CONTACTS_PHONE,
+    PUBLIC_CONTACTS_EMAIL,
+    PUBLIC_CONTACTS_TELEGRAM,
+    PUBLIC_CONTACTS_GITHUB,
+    PUBLIC_OFFICE_COORDS_LAT,
+    PUBLIC_OFFICE_COORDS_LON
+} from "$env/static/public";
+
 export const load = async ({locals, cookies}) => {
     const contacts = {
-        phone: "+7 (904) 221 38 18",
-        email: "efim-02@mail.ru",
-        telegram: "@hima27",
+        phone: PUBLIC_CONTACTS_PHONE,
+        email: PUBLIC_CONTACTS_EMAIL,
+        telegram: PUBLIC_CONTACTS_TELEGRAM,
     }
 
     const socLinks = [
         {
             name: "GitHub",
-            link: "https://github.com/IntiIT"
+            link: PUBLIC_CONTACTS_GITHUB
         }
     ]
 
@@ -21,8 +30,8 @@ export const load = async ({locals, cookies}) => {
     ]
 
     const officeCoords = {
-        lat: 56.149045,
-        lon: 47.2194552,
+        lat: PUBLIC_OFFICE_COORDS_LAT,
+        lon: PUBLIC_OFFICE_COORDS_LON,
     }
 
     return {
