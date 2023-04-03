@@ -161,13 +161,13 @@
             <div class="about-team__slide about-team__technologies">
                 <div class="about-team__about">
                     <h2 class="about-team__title">Технологии</h2>
-                    <div class="about-team__description">
+                    <p class="about-team__description">
                         В процессе разработки мы используем микросервисную разработку, это позволяет сохранить цену разработки нового функционала при росте кодовой базы.
                         Использование технологий искусственного интеллекта позволяет решать самые смелые и <span class="about-team-description__bold">нестандартные</span> задачи.
-                    </div>
-                    <div class="about-team__description">
+                    </p>
+                    <p class="about-team__description">
                         Наши разработки документируются для упрощения процессов подключения к проекту новых сотрудников и покрываются программными тестами для автоматического поиска ошибок до выгрузки обновления. Наши системы открыты к интеграции с внешними системами.
-                    </div>
+                    </p>
                 </div>
                 <div class="about-team__image">
                     <img src="/images/team/technologies.svg" alt="Алгоритм работы">
