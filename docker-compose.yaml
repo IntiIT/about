@@ -22,6 +22,7 @@ services:
         CONTACTS_GITHUB: ${CONTACTS_GITHUB:?}
         OFFICE_COORDS_LAT: ${OFFICE_COORDS_LAT:?}
         OFFICE_COORDS_LON: ${OFFICE_COORDS_LON:?}
+        MAKE_OFFER_FORM_LINK: ${MAKE_OFFER_FORM_LINK:?}
     restart: on-failure
     networks:
       - main

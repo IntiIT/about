@@ -4,7 +4,8 @@ import {
     PUBLIC_CONTACTS_TELEGRAM,
     PUBLIC_CONTACTS_GITHUB,
     PUBLIC_OFFICE_COORDS_LAT,
-    PUBLIC_OFFICE_COORDS_LON
+    PUBLIC_OFFICE_COORDS_LON,
+    PUBLIC_MAKE_OFFER_FORM_LINK
 } from "$env/static/public";
 
 export const load = async ({locals, cookies}) => {
@@ -38,6 +39,7 @@ export const load = async ({locals, cookies}) => {
         contacts: contacts,
         socLinks: socLinks,
         aboutTextEndingList: aboutTextEndingList,
-        officeCoords: officeCoords
+        officeCoords: officeCoords,
+        makeOfferFormLink: PUBLIC_MAKE_OFFER_FORM_LINK,
     }
 }

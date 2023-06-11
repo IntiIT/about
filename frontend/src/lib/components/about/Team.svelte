@@ -121,7 +121,7 @@
                 <div class="about-team__about">
                     <h2 class="about-team__title">О компании</h2>
                     <div class="about-team__description about-team-description">
-                        <p class="about-team-description__block">ИНТИИТ — команда молодых специалистов. Мы постоянно развиваем наши компетенции и применяем проверенные <span class="about-team-description__bold">инновационные</span> решения для реализации функционала проекта.</p>
+                        <p class="about-team-description__block">ИНТИИТ — команда профессионалов. Мы постоянно развиваем наши компетенции и применяем проверенные <span class="about-team-description__bold">инновационные</span> решения для реализации функционала проекта.</p>
                         <p class="about-team-description__block">Проекты в нашем портфолио разработаны с использованием современных технологий, в том числе с использованием машинного обучения. Это позволяет нам создавать масштабируемое программного обеспечение сохраняя высокую скорость разработки.</p>
                         <p class="about-team-description__competencies">
                             <RecursiveList children={competencies} />

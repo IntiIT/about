@@ -16,13 +16,16 @@ ARG CONTACTS_TELEGRAM
 ARG CONTACTS_GITHUB
 ARG OFFICE_COORDS_LAT
 ARG OFFICE_COORDS_LON
-RUN echo "MAPBOX_TOKEN=${MAPBOX_TOKEN}" > ./.env && \
-    echo "CONTACTS_PHONE=${CONTACTS_PHONE}" >> ./.env && \
-    echo "CONTACTS_EMAIL=${CONTACTS_EMAIL}" >> ./.env && \
-    echo "CONTACTS_TELEGRAM=${CONTACTS_TELEGRAM}" >> ./.env && \
-    echo "CONTACTS_GITHUB=${CONTACTS_GITHUB}" >> ./.env && \
-    echo "OFFICE_COORDS_LAT=${OFFICE_COORDS_LAT}" >> ./.env && \
-    echo "OFFICE_COORDS_LON=${OFFICE_COORDS_LON}" >> ./.env
+ARG MAKE_OFFER_FORM_LINK
+
+RUN echo "PUBLIC_MAPBOX_TOKEN=${MAPBOX_TOKEN}" > ./.env && \
+    echo "PUBLIC_CONTACTS_PHONE=${CONTACTS_PHONE}" >> ./.env && \
+    echo "PUBLIC_CONTACTS_EMAIL=${CONTACTS_EMAIL}" >> ./.env && \
+    echo "PUBLIC_CONTACTS_TELEGRAM=${CONTACTS_TELEGRAM}" >> ./.env && \
+    echo "PUBLIC_CONTACTS_GITHUB=${CONTACTS_GITHUB}" >> ./.env && \
+    echo "PUBLIC_MAKE_OFFER_FORM_LINK=${MAKE_OFFER_FORM_LINK}" >> ./.env && \
+    echo "PUBLIC_OFFICE_COORDS_LAT=${OFFICE_COORDS_LAT}" >> ./.env && \
+    echo "PUBLIC_OFFICE_COORDS_LON=${OFFICE_COORDS_LON}" >> ./.env
 
 RUN npm run build
 RUN npm prune --production
