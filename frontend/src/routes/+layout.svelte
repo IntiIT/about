@@ -23,6 +23,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="favicon.png"/>
 
+    <!-- TODO expose ya_metrika_id   -->
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

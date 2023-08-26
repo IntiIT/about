@@ -30,14 +30,17 @@
                 </div>
             </div>
             <div class="footer__column footer__column_column3">
-            </div>
-            <div class="footer__column footer__column_column4">
                 <div class="footer__links">
                     <div class="footer__link"><a href="/#team" on:click={handleAnchorClick}>наша команда</a></div>
                     <div class="footer__link"><a href="/#portfolio" on:click={handleAnchorClick}>портфолио</a></div>
                     <div class="footer__link"><a href="/#contacts" on:click={handleAnchorClick}>контакты</a></div>
                 </div>
                 <div class="footer__dev">ООО "ИНТИИТ"</div>
+            </div>
+            <div class="footer__column footer__column_column4">
+                <div class="fasie-logo">
+                    <img src="fasie-logo.png" alt="Фонд содействия развитию малых форм предприятий в научно-технической сфере">
+                </div>
             </div>
         </div>
     </div>
@@ -189,6 +192,12 @@
           font-size: 16px;
         }
       }
+    }
+  }
+
+  .fasie-logo {
+    img {
+      max-width: 200px;
     }
   }
 </style>
